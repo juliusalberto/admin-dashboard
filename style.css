@@ -1,0 +1,303 @@
+* {
+    font: 1em 'Roboto';
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --grey-color: #E2E8F0;
+}
+
+body {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    min-height: 100vh;
+}
+
+ul img {
+    height: 3rem;
+    width: 3rem;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    grid-column: span 1;
+    grid-row: 1 / -1;
+    background-color: #1A92D3;
+    color: white;
+    /* border: 1px solid #000; */
+    padding: 2rem;
+    font-size: 1.3rem;
+}
+
+nav li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+nav li img {
+    margin-right: 10px;
+}
+
+.white-svg {
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+}
+
+.logo {
+    font: 2rem 'Roboto';
+}
+
+nav > * {
+    margin-bottom: 10%;
+}
+
+nav > ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul > li {
+    list-style-type: none;
+}
+
+.top {
+    grid-column: 2 / -1;
+    /* border: 1px solid #000; */
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.top img {
+    height: 2rem;
+    width: auto;
+}
+
+.profile {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+
+.profile button {
+    background-color: #1A92D3;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 20px;
+    margin: 0 10px;
+}
+
+.profile .circle {
+    height: 70px;
+    width: 70px;
+    margin-right: 1rem;
+}
+
+.flex-1 {
+    font-size: small;
+}
+
+.bigfont {
+    font-size: 30px;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.profile {
+    display: flex;
+}
+
+.circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #FACC14;
+}
+
+.search .circle {
+    height: 3rem;
+    width: 3rem;
+}
+
+.search > * {
+    margin: 0 10px;
+}
+
+#search-bar {
+    flex: 1;
+    /* border: 1px solid #000; */
+    height: 50%;
+    border-radius: 20px;
+    background-color: var(--grey-color);
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.small-svg {
+    height: 20px;
+    width: 20px;
+}
+
+.content {
+    display: grid;
+    background-color: var(--grey-color);
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 50px repeat(6, 1fr);
+    grid-column: span 4;
+    grid-row: 2 / -1;
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-rows: repeat(3, minmax(200px, 1fr));
+    column-gap: 20px;
+    row-gap: 20px;
+    grid-column: 1 / 5;
+    grid-row: 2 / -1;
+}
+
+.right-container {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-row: 1 /  -1;
+    grid-column: 5;
+}
+
+.content h2 {
+    font-weight: bold;
+}
+
+.project {
+    /* border: 1px solid #000; */
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    background-color: white;
+    padding: 20px 30px;
+    margin: 0 10px 10px 10px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.project p {
+    grid-row: 2 / -1;
+    grid-column: 1 / 4;
+}
+
+.project::before {
+    content: ''; /* Pseudo-elements require the content property */
+    position: absolute; /* Position it relative to the card */
+    left: 0; /* Stick to the left side of the card */
+    top: 0; /* Start from the top of the card */
+    bottom: 0; /* Stretch to the bottom of the card */
+    width: 10px; /* Width of the yellow part */
+    background-color: #FFC107; /* The yellow color */
+    border-top-left-radius: 20px; /* Rounded corner on the top-left */
+    border-bottom-left-radius: 20px; /* Rounded corner on the bottom-left */
+  }
+
+.project h2 {
+    font-weight: bold;
+    grid-row: 1;
+    grid-column: span 2;
+}
+
+.project div {
+    grid-row: -1;
+    grid-column: -1;
+}
+
+.content > h2 {
+    align-self: end;
+    justify-self: start;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.right-container {
+    padding: 25px;
+    grid-column: span 2;
+}
+
+.med-block {
+    display: flex;
+    flex-direction: column;
+}
+
+.med-block > div {
+    /* border: 1px solid #000; */
+    border-radius: 20px;
+    flex: 1;
+    margin: 10px 0px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: white;
+}
+
+
+.small {
+    font-size: small;
+}
+
+.announce {
+    margin: 10px;
+    flex: 1;    
+}
+
+.bottom-border {
+    border-bottom: 1px solid grey;
+}
+
+.announce p {
+    margin-bottom: 5px;
+    font-size: 0.9em;
+}
+
+.announce h3 {
+    font-size: 1em;
+}
+
+.trending {
+    display: flex;
+    flex-direction: row;
+}
+
+.trending > div {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.trending > .circle {
+    margin-right: 10px;
+    height: 50px;
+    width: 50px;
+}
+
+.announce.trending {
+    align-items: center;
+
+}
